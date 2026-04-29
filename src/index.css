@@ -2,20 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ── CSS Variables ─────────────────────────────────── */
 :root {
-  --cyan:   #00f5ff;
+  --cyan: #00f5ff;
   --purple: #a855f7;
-  --bg:     #050810;
-  --text:   #e2e8f0;
-  --muted:  #94a3b8;
-  --faint:  #475569;
+  --bg: #050810;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --faint: #475569;
 }
 
-/* ── Base ──────────────────────────────────────────── */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
+
+html, body, #root {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
 body {
   background-color: var(--bg);
@@ -25,11 +34,27 @@ body {
   overflow-x: hidden;
 }
 
-::-webkit-scrollbar { width: 3px; }
-::-webkit-scrollbar-track { background: var(--bg); }
-::-webkit-scrollbar-thumb { background: rgba(0,245,255,0.25); border-radius: 2px; }
+a {
+  -webkit-tap-highlight-color: transparent;
+}
 
-/* ── Glassmorphism ─────────────────────────────────── */
+button {
+  font: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0,245,255,0.25);
+  border-radius: 2px;
+}
+
 .glass {
   background: rgba(255,255,255,0.03);
   backdrop-filter: blur(18px);
@@ -52,12 +77,12 @@ body {
 .glass-hover {
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
+
 .glass-hover:hover {
   border-color: rgba(0,245,255,0.25);
   box-shadow: 0 0 32px rgba(0,245,255,0.08), inset 0 0 24px rgba(0,245,255,0.03);
 }
 
-/* ── Mono label ────────────────────────────────────── */
 .mono {
   font-family: 'Space Mono', monospace;
   font-size: 10px;
@@ -65,7 +90,6 @@ body {
   color: rgba(0,245,255,0.45);
 }
 
-/* ── Tech Tags ─────────────────────────────────────── */
 .tech-tag {
   font-family: 'Space Mono', monospace;
   font-size: 10px;
@@ -80,6 +104,7 @@ body {
   cursor: default;
   transition: background 0.2s ease, box-shadow 0.2s ease;
 }
+
 .tech-tag:hover {
   background: rgba(0,245,255,0.12);
   box-shadow: 0 0 12px rgba(0,245,255,0.3);
@@ -90,7 +115,43 @@ body {
   background: rgba(168,85,247,0.05);
   color: #a855f7;
 }
+
 .tech-tag-purple:hover {
   background: rgba(168,85,247,0.12);
   box-shadow: 0 0 12px rgba(168,85,247,0.3);
+}
+
+@media (max-width: 767px) {
+  .site-nav-links,
+  .site-nav-version {
+    display: none !important;
+  }
+
+  .site-nav-toggle,
+  .site-nav-mobile {
+    display: flex !important;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+
+  .hero-side,
+  .hero-status-card,
+  .hero-langs,
+  .footer-links {
+    width: 100%;
+  }
+
+  .footer-top,
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+
+  .footer-btn {
+    flex: 1 1 100%;
+    justify-content: center;
+  }
 }

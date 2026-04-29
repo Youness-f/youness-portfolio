@@ -6,14 +6,14 @@ export default function ProfileFrame() {
     <div
       style={{
         position: 'relative',
-        width: 230, height: 230,
+        width: 'min(230px, 72vw)', height: 'min(230px, 72vw)',
         animation: 'float 4s ease-in-out infinite',
       }}
     >
       {/* Outer dashed ring — CW */}
       <svg
         style={{ position: 'absolute', inset: 0, animation: 'spin-cw 10s linear infinite' }}
-        viewBox="0 0 230 230" width="230" height="230"
+        viewBox="0 0 230 230" width="100%" height="100%"
       >
         <circle cx="115" cy="115" r="111" fill="none"
           stroke="rgba(0,245,255,0.25)" strokeWidth="1.2" strokeDasharray="9 5" />
@@ -22,7 +22,7 @@ export default function ProfileFrame() {
       {/* Inner dashed ring — CCW */}
       <svg
         style={{ position: 'absolute', inset: 0, animation: 'spin-ccw 7s linear infinite' }}
-        viewBox="0 0 230 230" width="230" height="230"
+        viewBox="0 0 230 230" width="100%" height="100%"
       >
         <circle cx="115" cy="115" r="97" fill="none"
           stroke="rgba(168,85,247,0.22)" strokeWidth="1" strokeDasharray="5 9" />
@@ -31,7 +31,7 @@ export default function ProfileFrame() {
       {/* Corner brackets + crosshair ticks */}
       <svg
         style={{ position: 'absolute', inset: 0 }}
-        viewBox="0 0 230 230" width="230" height="230"
+        viewBox="0 0 230 230" width="100%" height="100%"
       >
         {/* Top-left */}
         <path d="M28 52 L28 28 L52 28" fill="none" stroke="#00f5ff" strokeWidth="2.2" />

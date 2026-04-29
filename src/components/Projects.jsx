@@ -26,7 +26,7 @@ export default function Projects() {
           {/* Real Estate App — featured 2-col */}
           <BentoCard
             delay={0.1}
-            style={{ padding: '32px 34px', minHeight: 265, gridColumn: 'span 2' }}
+            style={{ padding: '32px 34px', minHeight: 265, gridColumn: '1 / -1' }}
           >
             {/* Decorative watermark icon */}
             <div

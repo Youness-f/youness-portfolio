@@ -28,7 +28,7 @@ export default function Education() {
             delay={0.1}
             style={{
               padding: '32px 34px', minHeight: 220,
-              gridColumn: 'span 2',
+              gridColumn: '1 / -1',
             }}
           >
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 22 }}>
