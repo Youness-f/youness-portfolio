@@ -1,4 +1,4 @@
-import { Monitor, Cpu, Server, GitBranch, ExternalLink } from 'lucide-react'
+import { Monitor, Cpu, Server, ShieldCheck, ShoppingCart, ExternalLink } from 'lucide-react'
 import BentoCard   from './BentoCard'
 import TechTag     from './TechTag'
 import SectionHead from './SectionHead'
@@ -126,8 +126,106 @@ export default function Projects() {
             </p>
           </BentoCard>
 
+          <BentoCard delay={0.22} style={{ padding: 28, minHeight: 265 }}>
+            <div
+              style={{
+                position: 'absolute', top: -12, right: -12,
+                opacity: 0.04, pointerEvents: 'none',
+              }}
+            >
+              <ShoppingCart size={132} color="#00f5ff" />
+            </div>
+
+            <div
+              style={{
+                width: 42, height: 42, borderRadius: 12,
+                background: 'rgba(0,245,255,0.07)',
+                border: '1px solid rgba(0,245,255,0.22)',
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                marginBottom: 14,
+              }}
+            >
+              <ShoppingCart size={20} color="#00f5ff" strokeWidth={1.5} />
+            </div>
+
+            <div className="mono" style={{ marginBottom: 6 }}>@ PERSONAL PROJECT</div>
+            <span
+              style={{
+                fontFamily: "'Space Mono', monospace", fontSize: 10,
+                color: '#22c55e', background: 'rgba(34,197,94,0.1)',
+                padding: '2px 8px', borderRadius: 4,
+                display: 'inline-block', marginBottom: 14,
+              }}
+            >
+              REACT + SPRING BOOT
+            </span>
+            <h3 style={{ fontSize: 16, fontWeight: 700, color: '#e2e8f0', marginBottom: 10, lineHeight: 1.3 }}>
+              E-Commerce Management Platform
+            </h3>
+            <p style={{ fontSize: 12.5, color: '#94a3b8', lineHeight: 1.65, marginBottom: 16 }}>
+              Full-stack e-commerce dashboard for managing products, categories, orders, and customers.
+              Built a React admin interface connected to a Spring Boot API with JWT authentication,
+              role-based access, search and filtering, and sales tracking.
+            </p>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 7 }}>
+              {['React.js', 'Spring Boot', 'Java', 'MySQL', 'JWT', 'REST API'].map(t => (
+                <TechTag key={t} label={t} />
+              ))}
+            </div>
+          </BentoCard>
+
+          <BentoCard delay={0.3} style={{ padding: 28, minHeight: 265 }}>
+            <div
+              style={{
+                position: 'absolute', top: -12, right: -12,
+                opacity: 0.04, pointerEvents: 'none',
+              }}
+            >
+              <ShieldCheck size={132} color="#a855f7" />
+            </div>
+
+            <div
+              style={{
+                width: 42, height: 42, borderRadius: 12,
+                background: 'rgba(168,85,247,0.07)',
+                border: '1px solid rgba(168,85,247,0.22)',
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                marginBottom: 14,
+              }}
+            >
+              <ShieldCheck size={20} color="#a855f7" strokeWidth={1.5} />
+            </div>
+
+            <div className="mono" style={{ color: 'rgba(168,85,247,0.55)', marginBottom: 6 }}>
+              @ ACADEMIC PROJECT
+            </div>
+            <span
+              style={{
+                fontFamily: "'Space Mono', monospace", fontSize: 10,
+                color: '#f59e0b', background: 'rgba(245,158,11,0.1)',
+                padding: '2px 8px', borderRadius: 4,
+                display: 'inline-block', marginBottom: 14,
+              }}
+            >
+              SECURE WEB APP
+            </span>
+            <h3 style={{ fontSize: 16, fontWeight: 700, color: '#e2e8f0', marginBottom: 10, lineHeight: 1.3 }}>
+              Student Task & Collaboration Portal
+            </h3>
+            <p style={{ fontSize: 12.5, color: '#94a3b8', lineHeight: 1.65, marginBottom: 16 }}>
+              Collaborative task management platform for students to organize projects, assign work,
+              track deadlines, and share updates in real time. Developed with React on the frontend
+              and Spring Boot on the backend with secure authentication, team workspaces, and notification logic.
+            </p>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 7 }}>
+              {['React.js', 'Spring Boot', 'PostgreSQL', 'WebSocket', 'JWT', 'Tailwind CSS'].map(t => (
+                <TechTag key={t} label={t} purple={t === 'Tailwind CSS'} />
+              ))}
+            </div>
+          </BentoCard>
+
           {/* Backend Stack */}
-          <BentoCard delay={0.26} style={{ padding: 28, minHeight: 190 }}>
+          <BentoCard delay={0.34} style={{ padding: 28, minHeight: 190 }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 16 }}>
               <Server size={17} color="#00f5ff" strokeWidth={1.5} />
               <span className="mono">BACKEND_STACK</span>
@@ -140,7 +238,7 @@ export default function Projects() {
           </BentoCard>
 
           {/* Frontend Stack */}
-          <BentoCard delay={0.32} style={{ padding: 28, minHeight: 190 }}>
+          <BentoCard delay={0.38} style={{ padding: 28, minHeight: 190 }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 16 }}>
               <Monitor size={17} color="#a855f7" strokeWidth={1.5} />
               <span className="mono" style={{ color: 'rgba(168,85,247,0.6)' }}>FRONTEND_STACK</span>
@@ -154,7 +252,7 @@ export default function Projects() {
 
           {/* Experience Log */}
           <BentoCard
-            delay={0.38}
+            delay={0.44}
             style={{
               padding: 28, minHeight: 190,
               background: 'linear-gradient(135deg, rgba(0,245,255,0.03), rgba(168,85,247,0.04))',
@@ -163,7 +261,7 @@ export default function Projects() {
             <div className="mono" style={{ marginBottom: 20 }}>EXPERIENCE_LOG</div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
               {[
-                { k: 'Projects Built', v: '5+',  c: '#00f5ff' },
+                { k: 'Projects Built', v: '7+',  c: '#00f5ff' },
                 { k: 'Tech Mastered',  v: '10+', c: '#a855f7' },
                 { k: 'Years Coding',   v: '4+',  c: '#22c55e' },
               ].map(({ k, v, c }) => (
