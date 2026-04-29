@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Mail, GitBranch, Globe } from 'lucide-react'
+import { Mail, GitBranch, Globe, Download } from 'lucide-react'
 
 const LINKS = [
   {
@@ -19,6 +19,12 @@ const LINKS = [
     icon: Globe, label: 'LinkedIn',
     base: { background: 'transparent', border: '1px solid rgba(255,255,255,0.09)', color: '#94a3b8' },
     hover: { background: 'transparent', border: '1px solid rgba(0,245,255,0.35)', color: '#00f5ff' },
+  },
+  {
+    href: '/Youness-El-Fadil-CV.pdf', target: '_blank', rel: 'noopener noreferrer',
+    icon: Download, label: 'Resume',
+    base: { background: 'transparent', border: '1px solid rgba(255,255,255,0.09)', color: '#94a3b8' },
+    hover: { background: 'transparent', border: '1px solid rgba(168,85,247,0.4)', color: '#d8b4fe' },
   },
 ]
 
@@ -83,10 +89,10 @@ export default function Footer() {
               marginBottom: 6,
             }}
           >
-            Let's build something great.
+            Full-stack developer open to opportunities.
           </h3>
           <p style={{ fontSize: 13, color: '#475569' }}>
-            Open to internships, collaborations, and full-time opportunities.
+            Available for internships, junior roles, and collaborative web projects.
           </p>
         </div>
 

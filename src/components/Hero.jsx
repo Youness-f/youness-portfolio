@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Terminal, ChevronRight, Mail } from 'lucide-react'
+import { Terminal, ChevronRight, Mail, Download } from 'lucide-react'
 import ProfileFrame from './ProfileFrame'
 import LangBar from './LangBar'
 import TechTag from './TechTag'
@@ -13,7 +13,7 @@ const STATUS_GRID = [
   { k: 'STATUS', v: 'AVAILABLE', c: '#22c55e' },
   { k: 'BASE', v: 'MOROCCO', c: '#00f5ff' },
   { k: 'DEGREE', v: 'MSC STUDENT', c: '#a855f7' },
-  { k: 'FOCUS', v: 'FULL STACK', c: '#f59e0b' },
+  { k: 'FOCUS', v: 'JAVA • REACT', c: '#f59e0b' },
 ]
 
 const LANGS = [
@@ -96,7 +96,7 @@ export default function Hero() {
                 color: '#a855f7',
               }}
             >
-              Full Stack Engineer
+              Full-Stack Developer
             </span>
             <span
               style={{
@@ -122,9 +122,9 @@ export default function Hero() {
               maxWidth: '50ch',
             }}
           >
-            Engineering scalable full-stack systems from Morocco.
-            Specializing in Java Spring Boot backends and modern React / Angular
-            frontends from database schema to polished UI.
+            Software engineering student building full-stack web applications with
+            Java Spring Boot, React, Angular, and relational databases. Focused on
+            clean backend architecture, secure APIs, and polished user interfaces.
           </motion.p>
 
           <motion.div
@@ -161,6 +161,28 @@ export default function Hero() {
               onMouseLeave={e => { e.currentTarget.style.background = 'rgba(0,245,255,0.08)' }}
             >
               View Projects <ChevronRight size={13} />
+            </a>
+            <a
+              href="/Youness-El-Fadil-CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                padding: '10px 22px',
+                borderRadius: 8,
+                background: 'rgba(168,85,247,0.08)',
+                border: '1px solid rgba(168,85,247,0.35)',
+                color: '#d8b4fe',
+                fontSize: 13,
+                fontWeight: 600,
+                display: 'flex',
+                alignItems: 'center',
+                gap: 6,
+                transition: 'background 0.2s ease',
+              }}
+              onMouseEnter={e => { e.currentTarget.style.background = 'rgba(168,85,247,0.16)' }}
+              onMouseLeave={e => { e.currentTarget.style.background = 'rgba(168,85,247,0.08)' }}
+            >
+              <Download size={13} /> Download CV
             </a>
             <a
               href="#contact"
@@ -242,6 +264,17 @@ export default function Hero() {
             <div className="mono" style={{ marginBottom: 10 }}>LANGUAGES</div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
               {LANGS.map(l => <LangBar key={l.lang} {...l} />)}
+            </div>
+          </div>
+
+          <div style={{ width: '100%', maxWidth: 300 }}>
+            <div className="mono" style={{ marginBottom: 10 }}>CORE_PROFILE</div>
+            <div className="glass" style={{ padding: '14px 16px' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+                <span style={{ fontSize: 12, color: '#94a3b8' }}>Software Engineering student at ENSA Khouribga.</span>
+                <span style={{ fontSize: 12, color: '#94a3b8' }}>Interested in internships and junior full-stack opportunities.</span>
+                <span style={{ fontSize: 12, color: '#94a3b8' }}>Focused on Spring Boot APIs, React interfaces, and SQL data modeling.</span>
+              </div>
             </div>
           </div>
         </motion.div>

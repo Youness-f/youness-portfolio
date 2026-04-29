@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Menu, X } from 'lucide-react'
+import { Download, Menu, X } from 'lucide-react'
 
 const LINKS = ['About', 'Education', 'Projects', 'Contact']
 
@@ -83,6 +83,22 @@ export default function Navbar() {
               {item}
             </a>
           ))}
+          <a
+            href="/Youness-El-Fadil-CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              fontSize: 13,
+              fontWeight: 600,
+              color: '#00f5ff',
+              textDecoration: 'none',
+              display: 'flex',
+              alignItems: 'center',
+              gap: 6,
+            }}
+          >
+            <Download size={14} /> Resume
+          </a>
         </div>
 
         <span
@@ -151,6 +167,22 @@ export default function Navbar() {
               {item}
             </a>
           ))}
+          <a
+            href="/Youness-El-Fadil-CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setMenuOpen(false)}
+            style={{
+              padding: '10px 12px',
+              borderRadius: 10,
+              color: '#00f5ff',
+              textDecoration: 'none',
+              background: 'rgba(0,245,255,0.05)',
+              border: '1px solid rgba(0,245,255,0.16)',
+            }}
+          >
+            Resume
+          </a>
         </div>
       )}
     </nav>
